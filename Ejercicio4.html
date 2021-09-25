@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Texto Bloqueado!</title>
+    <meta charset="utf-8" />
+    <script type="text/JavaScript">
+        function disableSelect(e) {
+            return false;
+        }
+        function reEnable() {
+            return true;
+        }
+        document.onselectstart = new Function("return false");
+        if (window.sidebar) {
+            document.onmousedown = disableSelect;
+            document.onclick = reEnable;
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        No se puede copiar este texto, si lo intenta se bloqueará
+    </p>
+</body>
+
+</html>

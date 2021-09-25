@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script type="text/javascript">
+        function enfocado(id){
+           document.getElementById(id).border = "2px solid red";
+        }
+        function desenfocado(id){
+            document.getElementById(id).style.border = 'inherit';
+        }
+    </script>
+</head>
+<body>
+    <form action="mailto: jsullato@ucsm.edu.pe" method="POST" enctype="text/plain">
+        <h1>Bienvenido</h1>
+        <fieldset>
+            <legend>
+                Datos Personales
+            </legend>
+            Introduce tu nombre: <input name="nombre" id="nombre" type="text" onfocus="javascript:enfocado(this.id)"
+                onblur="javascript:desenfocado(this.id)"/><br>
+            Mensaje: <textarea name="mensaje" rows="6" cols="60"></textarea><br>
+        </fieldset>
+        <br/>
+        <hr/>
+        <input type="button" value="Haz click sobre mi"
+            onclick="javascript:window.location = 'http://www.google.com'" />
+        <hr/>
+        Escoja Materia:
+        <select>
+            <optgroup label="Obligatorias">
+                <option value="mat">Matematica</option>
+                <option value="mat">Lenguaje</option>
+            </optgroup>
+            <optgroup label="Optativas">
+                <option value="cor">Corte y confeccion</option>
+                <option value="ast">Astronomia</option>
+            </optgroup>
+        </select>
+        </hr>
+        Selecciona los dias de disponibilidad: <br/>
+        <select>
+            <option value="">Seleccione un dia</option>
+            <option value="l">Lunes</option>
+            <option value="m">Martes</option>
+            <option value="mm">Miercoles</option>
+            <option value="j">Jueves</option>
+            <option value="v">Viernes</option>
+        </select>
+        <hr/>
+        Adjunta tu curriculum <input type="file" name="curriculum"/>
+        <input type="submit" value="Haz click para enviar la informacion" />
+        <input type="reset" value="Comenzar a rellenar de nuevo" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Javascript</title>
+    <meta charset="utf-8" />
+    <script type="text/JavaScript">
+        function mostrarMensaje1() {
+            alert('Bienvenido a Javascript');
+        }
+        function mostrarMensaje2() {
+            alert('Ha hecho click sobre el párrafo inferior');
+        }
+ </script>
+</head>
+
+<body>
+    <div>
+        <p>Aquí un párrafo de texto situado antes de la imagen, dentro de un contenedor
+            div</p>
+        <img onclick="mostrarMensaje1()" src="./boton.png" alt="Notepad++" width="100" title="Editor Notepad++" />
+        <p onclick="mostrarMensaje2()">
+            Aquí otro párrafo de texto. Javascript en un lengujae utilizado para dotar de
+            efectos dinámicos
+        </p>
+    </div>
+</body>
+
+</html>
