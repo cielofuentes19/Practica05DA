@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script> 
+<script>
+$(document).ready(function() {
+	$("button").click(function(){
+		$("#div1").fadeTo("slow", 0.15);
+		$("#div2").fadeTo("slow", 0.4);
+		$("#div3").fadeTo("slow", 0.7);
+	});
+});
+</script> 
+</head>
+<body>
+
+<p>Demostración de fadeTo() con diferentes parámetros.</p>
+<button>Haga click para atenuar en los cuadros</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div><br>
+
+</body>
+</html>
